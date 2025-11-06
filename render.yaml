@@ -1,0 +1,16 @@
+# Exported from Render on 2025-11-06T22:10:58Z
+version: "1"
+projects:
+- name: My project
+  environments:
+  - name: Production
+    services:
+    - type: web
+      name: shaka-mcp
+      runtime: docker
+      repo: https://github.com/shaka26/shaka-mcp
+      plan: free
+      region: oregon
+      dockerContext: .
+      dockerfilePath: ./Dockerfile
+      autoDeployTrigger: commit
