@@ -32,7 +32,7 @@ app.mount("/", mcp_server)
 def main():
     uvicorn.run(
         app,
-        host=settings.HOST,
+        host="0.0.0.0",
         port=settings.PORT,
         log_level="debug",
     )
